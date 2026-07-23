@@ -222,6 +222,44 @@ export const PRESETS = {
 
         shadowColor:"#000000"
 
+    },
+
+    purpleDream:{
+
+        backgroundColor:"#2E1065",
+
+        glassColor:"#C4B5FD",
+
+        transparency:0.16,
+
+        blur:22,
+
+        borderRadius:28,
+
+        borderWidth:1,
+
+        borderOpacity:0.30,
+
+        shadowX:0,
+
+        shadowY:18,
+
+        shadowBlur:40,
+
+        shadowSpread:0,
+
+        shadowOpacity:0.35,
+
+        shadowColor:"#7B61FF",
+
+        useGradient:true,
+
+        gradientColor1:"#7B61FF",
+
+        gradientColor2:"#C084FC",
+
+        gradientAngle:135
+
     }
 
 };

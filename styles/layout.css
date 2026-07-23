@@ -65,31 +65,96 @@
 
 
 /* ==========================================================
-   HEADER LEFT
+   LOGO AREA
 ========================================================== */
 
-.header__left{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:var(--space-5);
-
-}
-
-
-/* ==========================================================
-   HEADER RIGHT
-========================================================== */
-
-.header__right{
+.logo-area{
 
     display:flex;
 
     align-items:center;
 
     gap:var(--space-4);
+
+    min-width:0;
+
+}
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2px;
+
+    min-width:0;
+
+}
+
+.logo-text h1{
+
+    font-size:var(--font-size-xl);
+
+    line-height:1.1;
+
+    white-space:nowrap;
+
+}
+
+.logo-text span{
+
+    font-size:var(--font-size-sm);
+
+    color:var(--color-text-secondary);
+
+    white-space:nowrap;
+
+}
+
+/* ==========================================================
+   HEADER ACTIONS
+========================================================== */
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-3);
+
+    flex-shrink:0;
+
+}
+
+.header-actions svg{
+
+    display:block;
+
+    flex-shrink:0;
+
+}
+
+/* ==========================================================
+   THEME TOGGLE ICON SWAP
+========================================================== */
+
+.icon-sun{
+
+    display:none;
+
+}
+
+body.dark .icon-moon{
+
+    display:none;
+
+}
+
+body.dark .icon-sun{
+
+    display:block;
 
 }
 
@@ -308,6 +373,12 @@ body.dark .header{
     background:rgba(15,23,42,.80);
 
     border-color:var(--dark-border);
+
+}
+
+body.dark .logo-text span{
+
+    color:var(--dark-text-secondary);
 
 }
 

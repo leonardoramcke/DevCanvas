@@ -92,17 +92,9 @@ function updateButton(){
 
     if(!DOM.themeToggle) return;
 
-    if(state.theme === DARK){
-
-        DOM.themeToggle.textContent = "☀️ Light Mode";
-
-    }
-
-    else{
-
-        DOM.themeToggle.textContent = "🌙 Dark Mode";
-
-    }
+    DOM.themeToggle.title = state.theme === DARK
+        ? "Ativar modo claro"
+        : "Ativar modo escuro";
 
 }
 

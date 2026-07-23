@@ -319,6 +319,110 @@
 
 }
 
+.modal__header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:var(--space-5);
+
+}
+
+.modal__body{
+
+    color:var(--color-text-secondary);
+
+    line-height:1.6;
+
+    margin-bottom:var(--space-6);
+
+}
+
+.modal__footer{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+body.dark .modal{
+
+    background:var(--dark-surface);
+
+}
+
+body.dark .modal__body{
+
+    color:var(--dark-text-secondary);
+
+}
+
+/* ==========================================================
+   INFO PANEL
+========================================================== */
+
+.info-panel h3{
+
+    font-size:var(--font-size-md);
+
+}
+
+.info-panel ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-2);
+
+}
+
+.info-panel li{
+
+    font-size:var(--font-size-sm);
+
+    color:var(--color-text-secondary);
+
+}
+
+body.dark .info-panel li{
+
+    color:var(--dark-text-secondary);
+
+}
+
+/* ==========================================================
+   LOADING OVERLAY
+========================================================== */
+
+.loading-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:var(--z-loader);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.75);
+
+}
+
+body.dark .loading-overlay{
+
+    background:rgba(15,23,42,.75);
+
+}
+
 
 /* ==========================================================
    LOADER
