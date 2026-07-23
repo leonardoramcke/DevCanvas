@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- ========================================================= -->
+    <!-- METADADOS -->
+    <!-- ========================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="DevCanvas - Gerador moderno de Glassmorphism, Gradientes e Sombras CSS em tempo real.">
+
+    <meta
+        name="keywords"
+        content="CSS Generator, Glassmorphism, Gradient, Shadow Generator, CSS Tool">
+
+    <meta
+        name="author"
+        content="Leonardo Ramcke">
+
+    <title>DevCanvas | Modern CSS Generator</title>
+
+    <!-- ========================================================= -->
+    <!-- FAVICON -->
+    <!-- ========================================================= -->
+
+    <link
+        rel="icon"
+        href="./assets/favicon/favicon.ico">
+
+    <!-- ========================================================= -->
+    <!-- CSS -->
+    <!-- ========================================================= -->
+
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./styles/controls.css">
+    <link rel="stylesheet" href="./styles/preview.css">
+    <link rel="stylesheet" href="./styles/code.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/utilities.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+
+<body>
+
+    <!-- ========================================================= -->
+    <!-- APP -->
+    <!-- ========================================================= -->
+
+    <div class="app">
+
+        <!-- ========================================= -->
+        <!-- HEADER -->
+        <!-- ========================================= -->
+
+        <header class="header">
+
+            <div class="logo-area">
+
+                <div class="logo">
+
+                    DC
+
+                </div>
+
+                <div class="logo-text">
+
+                    <h1>DevCanvas</h1>
+
+                    <span>
+                        Modern CSS Generator
+                    </span>
+
+                </div>
+
+            </div>
+
+            <nav
+                class="header-actions"
+                aria-label="Menu Principal">
+
+                <button
+                    id="themeToggle"
+                    class="icon-button">
+
+                    🌙
+
+                </button>
+
+                <button
+                    id="resetButton"
+                    class="icon-button">
+
+                    Reset
+
+                </button>
+
+                <button
+                    id="githubButton"
+                    class="icon-button">
+
+                    GitHub
+
+                </button>
+
+            </nav>
+
+        </header>
+
+        <!-- ========================================= -->
+        <!-- MAIN -->
+        <!-- ========================================= -->
+
+        <main class="main-grid">
+
+            <!-- ===================================== -->
+            <!-- SIDEBAR -->
+            <!-- ===================================== -->
+
+            <aside class="sidebar">
+
+                <!-- =============================== -->
+                <!-- BACKGROUND -->
+                <!-- =============================== -->
+
+                <section class="panel">
+
+                    <h2>
+
+                        Fundo da Prévia
+
+                    </h2>
+
+                    <div class="control-group">
+
+                        <label for="backgroundColor">
+
+                            Cor de Fundo
+
+                        </label>
+
+                        <input
+                            id="backgroundColor"
+                            type="color"
+                            value="#5B7FFF">
+
+                    </div>
+
+                </section>
+
+                <!-- =============================== -->
+                <!-- GLASS -->
+                <!-- =============================== -->
+
+                <section class="panel">
+
+                    <h2>
+
+                        Glassmorphism
+
+                    </h2>
+
+                    <div class="control-group">
+
+                        <label for="glassColor">
+
+                            Cor
+
+                        </label>
+
+                        <input
+                            id="glassColor"
+                            type="color"
+                            value="#ffffff">
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label for="glassOpacity">
+
+                            Transparência
+
+                        </label>
+
+                        <input
+                            id="glassOpacity"
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="20">
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label for="glassBlur">
+
+                            Blur
+
+                        </label>
+
+                        <input
+                            id="glassBlur"
+                            type="range"
+                            min="0"
+                            max="40"
+                            value="20">
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label for="borderOpacity">
+
+                            Opacidade da Borda
+
+                        </label>
+
+                        <input
+                            id="borderOpacity"
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="25">
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label for="borderWidth">
+
+                            Espessura da Borda
+
+                        </label>
+
+                        <input
+                            id="borderWidth"
+                            type="range"
+                            min="0"
+                            max="10"
+                            value="1">
+
+                    </div>
+
+                </section>
+
+                <!-- =============================== -->
+                <!-- SHADOW -->
+                <!-- =============================== -->
+
+                <section class="panel">
+
+                    <h2>
+
+                        Box Shadow
+
+                    </h2>
+
+                    <div class="control-group">
+
+                        <label for="shadowX">
+
+                            Offset X
+
+                        </label>
+
+                        <input
+                            id="shadowX"
+                            type="range"
+                            min="-100"
+                            max="100"
+                            value="0">
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label for="shadowY">
+
+                            Offset Y
+
+                        </label>
+
+                        <input
+                            id="shadowY"
+                            type="range"
+                            min="-100"
+                            max="100"
+                            value="10">
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label for="shadowBlur">
+
+                            Blur
+
+                        </label>
+
+                        <input
+                            id="shadowBlur"
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="35">
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label for="shadowSpread">
+
+                            Spread
+
+                        </label>
+
+                        <input
+                            id="shadowSpread"
+                            type="range"
+                            min="-50"
+                            max="50"
+                            value="0">
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label for="shadowColor">
+
+                            Cor da Sombra
+
+                        </label>
+
+                        <input
+                            id="shadowColor"
+                            type="color"
+                            value="#000000">
+
+                    </div>
+
+                </section>
+
+                                <!-- =============================== -->
+                <!-- GRADIENT -->
+                <!-- =============================== -->
+
+                <section class="panel">
+
+                    <h2>
+
+                        Gradient
+
+                    </h2>
+
+                    <div class="control-group control__switch">
+
+                        <label for="useGradient">
+
+                            Usar gradiente no card
+
+                        </label>
+
+                        <input
+                            id="useGradient"
+                            type="checkbox"
+                            class="control__checkbox">
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label for="gradientColor1">
+
+                            Cor Primária
+
+                        </label>
+
+                        <input
+                            id="gradientColor1"
+                            type="color"
+                            value="#5B7FFF">
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label for="gradientColor2">
+
+                            Cor Secundária
+
+                        </label>
+
+                        <input
+                            id="gradientColor2"
+                            type="color"
+                            value="#7B61FF">
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label for="gradientAngle">
+
+                            Ângulo
+
+                        </label>
+
+                        <input
+                            id="gradientAngle"
+                            type="range"
+                            min="0"
+                            max="360"
+                            value="135">
+
+                    </div>
+
+                </section>
+
+                <!-- =============================== -->
+                <!-- BORDER RADIUS -->
+                <!-- =============================== -->
+
+                <section class="panel">
+
+                    <h2>
+
+                        Border Radius
+
+                    </h2>
+
+                    <div class="control-group">
+
+                        <label for="borderRadius">
+
+                            Raio
+
+                        </label>
+
+                        <input
+                            id="borderRadius"
+                            type="range"
+                            min="0"
+                            max="80"
+                            value="24">
+
+                    </div>
+
+                </section>
+
+                <!-- =============================== -->
+                <!-- PRESETS -->
+                <!-- =============================== -->
+
+                <section class="panel">
+
+                    <h2>
+
+                        Presets
+
+                    </h2>
+
+                    <div class="preset-grid">
+
+                        <button
+                            class="preset-btn"
+                            data-preset="glass-dark">
+
+                            Glass Dark
+
+                        </button>
+
+                        <button
+                            class="preset-btn"
+                            data-preset="glass-light">
+
+                            Glass Light
+
+                        </button>
+
+                        <button
+                            class="preset-btn"
+                            data-preset="neon-glow">
+
+                            Neon Glow
+
+                        </button>
+
+                        <button
+                            class="preset-btn"
+                            data-preset="soft-light">
+
+                            Soft Light
+
+                        </button>
+
+                        <button
+                            class="preset-btn"
+                            data-preset="aurora">
+
+                            Aurora
+
+                        </button>
+
+                        <button
+                            class="preset-btn"
+                            data-preset="purple-dream">
+
+                            Purple Dream
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </aside>
+
+            <!-- ===================================== -->
+            <!-- PREVIEW -->
+            <!-- ===================================== -->
+
+            <section
+                class="preview-section"
+                aria-labelledby="preview-title">
+
+                <header class="preview-header">
+
+                    <h2 id="preview-title">
+
+                        Preview em Tempo Real
+
+                    </h2>
+
+                    <p>
+
+                        Visualize instantaneamente todas as alterações.
+
+                    </p>
+
+                </header>
+
+                <div
+                    class="preview-background"
+                    id="previewBackground">
+
+                    <div
+                        class="glass-card"
+                        id="glassPreview">
+
+                        <div class="glass-content">
+
+                            <span class="badge">
+
+                                Glassmorphism
+
+                            </span>
+
+                            <h2>
+
+                                DevCanvas
+
+                            </h2>
+
+                            <p>
+
+                                Crie efeitos modernos de Glassmorphism,
+                                sombras compostas e gradientes em tempo
+                                real.
+
+                            </p>
+
+                            <button
+                                class="demo-button">
+
+                                Botão de Exemplo
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ===================================== -->
+            <!-- CSS OUTPUT -->
+            <!-- ===================================== -->
+
+            <aside
+                class="code-section">
+
+                <header class="code-header">
+
+                    <h2>
+
+                        CSS Gerado
+
+                    </h2>
+
+                    <button
+                        id="copyCSS"
+                        class="copy-button">
+
+                        Copiar CSS
+
+                    </button>
+
+                </header>
+
+                <div class="code-container">
+
+                    <textarea
+
+                        id="cssOutput"
+
+                        readonly
+
+                        spellcheck="false">
+
+background: rgba(255,255,255,.15);
+
+backdrop-filter: blur(20px);
+
+border:1px solid rgba(255,255,255,.25);
+
+border-radius:24px;
+
+box-shadow:
+0 10px 35px rgba(0,0,0,.20);
+
+                    </textarea>
+
+                </div>
+
+                <!-- =========================== -->
+                <!-- INFORMAÇÕES -->
+                <!-- =========================== -->
+
+                <section class="info-panel">
+
+                    <h3>
+
+                        Recursos
+
+                    </h3>
+
+                    <ul>
+
+                        <li>✔ Glassmorphism</li>
+
+                        <li>✔ Gradientes</li>
+
+                        <li>✔ Sombras</li>
+
+                        <li>✔ Border Radius</li>
+
+                        <li>✔ LocalStorage</li>
+
+                        <li>✔ Dark Mode</li>
+
+                        <li>✔ Presets</li>
+
+                        <li>✔ Clipboard API</li>
+
+                    </ul>
+
+                </section>
+
+            </aside>
+
+                        <!-- ========================================= -->
+            <!-- FIM DO MAIN -->
+            <!-- ========================================= -->
+
+        </main>
+
+        <!-- ========================================= -->
+        <!-- TOAST -->
+        <!-- ========================================= -->
+
+        <div
+            id="toast"
+            class="toast"
+            role="status"
+            aria-live="polite"
+            aria-hidden="true">
+
+            <span id="toastMessage">
+
+                CSS copiado com sucesso!
+
+            </span>
+
+        </div>
+
+        <!-- ========================================= -->
+        <!-- MODAL (RESERVADO PARA FUTURAS FUNÇÕES) -->
+        <!-- ========================================= -->
+
+        <div
+            id="modalOverlay"
+            class="modal-overlay hidden">
+
+            <div
+                class="modal">
+
+                <header class="modal-header">
+
+                    <h2>
+
+                        DevCanvas
+
+                    </h2>
+
+                    <button
+                        id="closeModal"
+                        class="icon-button">
+
+                        ✕
+
+                    </button>
+
+                </header>
+
+                <div
+                    class="modal-body">
+
+                    <p>
+
+                        Espaço reservado para futuras funcionalidades.
+
+                    </p>
+
+                </div>
+
+                <footer class="modal-footer">
+
+                    <button
+                        class="primary-button">
+
+                        Fechar
+
+                    </button>
+
+                </footer>
+
+            </div>
+
+        </div>
+
+        <!-- ========================================= -->
+        <!-- LOADING OVERLAY -->
+        <!-- ========================================= -->
+
+        <div
+            id="loadingOverlay"
+            class="loading-overlay hidden">
+
+            <div class="loader"></div>
+
+        </div>
+
+        <!-- ========================================= -->
+        <!-- FOOTER -->
+        <!-- ========================================= -->
+
+        <footer class="footer">
+
+            <div class="footer-left">
+
+                <h3>
+
+                    DevCanvas
+
+                </h3>
+
+                <p>
+
+                    Ferramenta moderna para criação de Glassmorphism,
+                    Gradientes e Sombras CSS em tempo real.
+
+                </p>
+
+            </div>
+
+            <div class="footer-center">
+
+                <ul>
+
+                    <li>
+
+                        HTML5
+
+                    </li>
+
+                    <li>
+
+                        CSS3
+
+                    </li>
+
+                    <li>
+
+                        JavaScript ES6+
+
+                    </li>
+
+                    <li>
+
+                        Sem Frameworks
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-right">
+
+                <small>
+
+                    Versão 1.0.0
+
+                </small>
+
+                <small>
+
+                    © 2026 DevCanvas
+
+                </small>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
+
+    <script src="./scripts/dom.js"></script>
+
+    <script src="./scripts/state.js"></script>
+
+    <script src="./scripts/storage.js"></script>
+
+    <script src="./scripts/presets.js"></script>
+
+    <script src="./scripts/generator.js"></script>
+
+    <script src="./scripts/clipboard.js"></script>
+
+    <script src="./scripts/theme.js"></script>
+
+    <script src="./scripts/preview.js"></script>
+
+    <script src="./scripts/events.js"></script>
+
+    <script src="./scripts/utils.js"></script>
+
+    <script src="./scripts/app.js"></script>
+
+    <script type="module" src="./scripts/app.js"></script>
+
+</body>
+
+</html>

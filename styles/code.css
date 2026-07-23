@@ -1,0 +1,409 @@
+/* ==========================================================
+   DevCanvas
+   Code.css
+   Painel do Gerador de Código
+========================================================== */
+
+
+/* ==========================================================
+   CODE PANEL
+========================================================== */
+
+.code-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-6);
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.code-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:var(--space-4);
+
+}
+
+
+.code-title{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+
+.code-title h2{
+
+    font-size:var(--font-size-lg);
+
+    font-weight:var(--font-weight-bold);
+
+}
+
+
+.code-title p{
+
+    font-size:var(--font-size-sm);
+
+    color:var(--color-text-secondary);
+
+}
+
+
+/* ==========================================================
+   EDITOR
+========================================================== */
+
+.code-editor{
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    flex:1;
+
+    border-radius:var(--radius-xl);
+
+    border:1px solid var(--color-border);
+
+    background:#0F172A;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+/* ==========================================================
+   EDITOR TOPBAR
+========================================================== */
+
+.code-editor__top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 20px;
+
+    background:#111827;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+
+/* ==========================================================
+   WINDOW BUTTONS
+========================================================== */
+
+.editor-dots{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+
+.editor-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+}
+
+
+.editor-dot--red{
+
+    background:#FF5F56;
+
+}
+
+
+.editor-dot--yellow{
+
+    background:#FFBD2E;
+
+}
+
+
+.editor-dot--green{
+
+    background:#27C93F;
+
+}
+
+
+/* ==========================================================
+   FILE NAME
+========================================================== */
+
+.editor-file{
+
+    color:#CBD5E1;
+
+    font-size:var(--font-size-sm);
+
+    font-family:var(--font-code);
+
+}
+
+
+/* ==========================================================
+   TEXTAREA
+========================================================== */
+
+#cssOutput{
+
+    flex:1;
+
+    width:100%;
+
+    min-height:520px;
+
+    padding:28px;
+
+    border:none;
+
+    resize:none;
+
+    background:#0F172A;
+
+    color:#E2E8F0;
+
+    font-family:var(--font-code);
+
+    font-size:.92rem;
+
+    line-height:1.8;
+
+    outline:none;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.code-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    background:#111827;
+
+}
+
+
+/* ==========================================================
+   STATUS
+========================================================== */
+
+.code-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#94A3B8;
+
+    font-size:.85rem;
+
+}
+
+
+.status-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--color-success);
+
+}
+
+
+/* ==========================================================
+   COPY BUTTON
+========================================================== */
+
+.copy-button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+
+/* ==========================================================
+   LINE NUMBERS
+========================================================== */
+
+.line-numbers{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:4px;
+
+    padding:28px 12px;
+
+    color:#64748B;
+
+    background:#111827;
+
+    user-select:none;
+
+    font-family:var(--font-code);
+
+    font-size:.85rem;
+
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+#cssOutput::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+#cssOutput::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+
+#cssOutput::-webkit-scrollbar-thumb{
+
+    background:#475569;
+
+    border-radius:999px;
+
+}
+
+
+#cssOutput::-webkit-scrollbar-thumb:hover{
+
+    background:#64748B;
+
+}
+
+
+/* ==========================================================
+   CODE INFO
+========================================================== */
+
+.code-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-4);
+
+    font-size:var(--font-size-sm);
+
+    color:var(--color-text-secondary);
+
+}
+
+
+/* ==========================================================
+   DARK MODE
+========================================================== */
+
+body.dark .code-editor{
+
+    border-color:var(--dark-border);
+
+}
+
+body.dark .code-title p{
+
+    color:var(--dark-text-secondary);
+
+}
+
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media (max-width:768px){
+
+    #cssOutput{
+
+        min-height:320px;
+
+        padding:20px;
+
+    }
+
+    .code-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .code-footer{
+
+        flex-direction:column;
+
+        gap:var(--space-3);
+
+        align-items:flex-start;
+
+    }
+
+}

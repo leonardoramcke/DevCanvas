@@ -1,0 +1,398 @@
+/* ==========================================================
+   DevCanvas
+   Style.css
+   Ajustes Globais da Aplicação
+========================================================== */
+
+
+/* ==========================================================
+   APP
+========================================================== */
+
+.app{
+
+    position:relative;
+
+    min-height:100vh;
+
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:var(--gradient-primary);
+
+    color:#FFFFFF;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+/* ==========================================================
+   SECTION TITLES
+========================================================== */
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--space-4);
+
+    margin-bottom:var(--space-5);
+
+}
+
+.section-title h2{
+
+    font-size:var(--font-size-lg);
+
+    font-weight:var(--font-weight-bold);
+
+}
+
+.section-title p{
+
+    font-size:var(--font-size-sm);
+
+    color:var(--color-text-secondary);
+
+}
+
+
+/* ==========================================================
+   STATUS BAR
+========================================================== */
+
+.status-bar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--space-5);
+
+    padding:16px 20px;
+
+    border-radius:var(--radius-lg);
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+}
+
+.status-bar__item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--color-border);
+
+    margin:var(--space-6) 0;
+
+}
+
+
+/* ==========================================================
+   EMPTY STATE
+========================================================== */
+
+.empty-state{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:var(--space-4);
+
+    padding:64px 32px;
+
+    text-align:center;
+
+}
+
+.empty-state__icon{
+
+    font-size:3rem;
+
+}
+
+.empty-state__title{
+
+    font-size:var(--font-size-xl);
+
+    font-weight:700;
+
+}
+
+.empty-state__description{
+
+    max-width:480px;
+
+    color:var(--color-text-secondary);
+
+}
+
+
+/* ==========================================================
+   LOADING
+========================================================== */
+
+.is-loading{
+
+    pointer-events:none;
+
+    opacity:.65;
+
+}
+
+
+/* ==========================================================
+   ACTIVE
+========================================================== */
+
+.is-active{
+
+    border-color:var(--color-primary)!important;
+
+    box-shadow:
+
+        0 0 0 3px rgba(91,127,255,.15);
+
+}
+
+
+/* ==========================================================
+   HIDDEN
+========================================================== */
+
+.is-hidden{
+
+    display:none!important;
+
+}
+
+
+/* ==========================================================
+   GLASS PRESET HELPERS
+========================================================== */
+
+.glass-light{
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.glass-dark{
+
+    background:rgba(15,23,42,.30);
+
+}
+
+.glass-strong{
+
+    backdrop-filter:blur(30px);
+
+    -webkit-backdrop-filter:blur(30px);
+
+}
+
+.glass-soft{
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+}
+
+
+/* ==========================================================
+   PRESET COLORS
+========================================================== */
+
+.preset-blue{
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #5B7FFF,
+
+        #38BDF8
+
+    );
+
+}
+
+.preset-purple{
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #7B61FF,
+
+        #C026D3
+
+    );
+
+}
+
+.preset-orange{
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #FB923C,
+
+        #F59E0B
+
+    );
+
+}
+
+.preset-green{
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #22C55E,
+
+        #14B8A6
+
+    );
+
+}
+
+
+/* ==========================================================
+   TRANSITIONS
+========================================================== */
+
+*{
+
+    transition:
+
+        background-color var(--transition),
+
+        color var(--transition),
+
+        border-color var(--transition),
+
+        box-shadow var(--transition);
+
+}
+
+
+/* ==========================================================
+   DARK MODE
+========================================================== */
+
+body.dark .status-bar{
+
+    background:var(--dark-surface);
+
+    border-color:var(--dark-border);
+
+}
+
+body.dark .divider{
+
+    background:var(--dark-border);
+
+}
+
+body.dark .section-title p{
+
+    color:var(--dark-text-secondary);
+
+}
+
+body.dark .empty-state__description{
+
+    color:var(--dark-text-secondary);
+
+}
+
+
+/* ==========================================================
+   SCROLL OFFSET
+========================================================== */
+
+html{
+
+    scroll-padding-top:90px;
+
+}
+
+
+/* ==========================================================
+   DEBUG (DESENVOLVIMENTO)
+========================================================== */
+
+/*
+
+.debug *{
+
+    outline:1px solid red;
+
+}
+
+*/

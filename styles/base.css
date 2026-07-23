@@ -1,0 +1,339 @@
+/* ==========================================================
+   DevCanvas
+   Base.css
+   Foundation / Reset / Global Styles
+========================================================== */
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ==========================================================
+   ROOT
+========================================================== */
+
+html{
+
+    font-size:16px;
+
+    scroll-behavior:smooth;
+
+    -webkit-text-size-adjust:100%;
+
+}
+
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body{
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    font-family:var(--font-family);
+
+    font-size:var(--font-size-md);
+
+    font-weight:var(--font-weight-regular);
+
+    line-height:1.6;
+
+    color:var(--color-text);
+
+    background:var(--color-background);
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+    transition:
+
+        background var(--transition),
+
+        color var(--transition);
+
+}
+
+
+/* ==========================================================
+   HEADINGS
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-weight:var(--font-weight-bold);
+
+    line-height:1.2;
+
+    color:inherit;
+
+}
+
+h1{
+
+    font-size:var(--font-size-3xl);
+
+}
+
+h2{
+
+    font-size:var(--font-size-2xl);
+
+}
+
+h3{
+
+    font-size:var(--font-size-xl);
+
+}
+
+
+/* ==========================================================
+   PARAGRAPHS
+========================================================== */
+
+p{
+
+    color:var(--color-text-secondary);
+
+}
+
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+    transition:color var(--transition-fast);
+
+}
+
+
+/* ==========================================================
+   LISTS
+========================================================== */
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+
+/* ==========================================================
+   IMAGES
+========================================================== */
+
+img,
+svg{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font:inherit;
+
+    color:inherit;
+
+}
+
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+input,
+textarea,
+select{
+
+    font:inherit;
+
+    color:inherit;
+
+}
+
+
+/* ==========================================================
+   TEXTAREA
+========================================================== */
+
+textarea{
+
+    resize:vertical;
+
+}
+
+
+/* ==========================================================
+   TABLES
+========================================================== */
+
+table{
+
+    border-collapse:collapse;
+
+    width:100%;
+
+}
+
+
+/* ==========================================================
+   HR
+========================================================== */
+
+hr{
+
+    border:none;
+
+    border-top:1px solid var(--color-border);
+
+}
+
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection{
+
+    background:var(--color-primary);
+
+    color:white;
+
+}
+
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+:focus-visible{
+
+    outline:3px solid rgba(91,127,255,.35);
+
+    outline-offset:3px;
+
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+    height:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#E5E7EB;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--color-primary);
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--color-primary-hover);
+
+}
+
+
+/* ==========================================================
+   DARK MODE
+========================================================== */
+
+body.dark{
+
+    background:var(--dark-background);
+
+    color:var(--dark-text);
+
+}
+
+body.dark p{
+
+    color:var(--dark-text-secondary);
+
+}
+
+body.dark hr{
+
+    border-color:var(--dark-border);
+
+}
+
+body.dark ::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+body.dark ::-webkit-scrollbar-thumb{
+
+    background:#475569;
+
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover{
+
+    background:#64748B;
+
+}

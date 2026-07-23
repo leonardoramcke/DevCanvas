@@ -1,0 +1,11 @@
+# Sistema Operacional (Windows / macOS)
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# VS Code / IDEs
+.vscode/
+.idea/
+
+# Logs e arquivos temporários
+*.log

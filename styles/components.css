@@ -1,0 +1,402 @@
+/* ==========================================================
+   DevCanvas
+   Components.css
+   Design System de Componentes
+========================================================== */
+
+
+/* ==========================================================
+   PANELS
+========================================================== */
+
+.panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-5);
+
+    padding:var(--space-6);
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.panel__header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.panel__title{
+
+    font-size:var(--font-size-lg);
+
+    font-weight:var(--font-weight-semibold);
+
+}
+
+.panel__body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-4);
+
+}
+
+
+/* ==========================================================
+   BUTTON BASE
+========================================================== */
+
+.button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 22px;
+
+    border-radius:var(--radius-md);
+
+    font-weight:var(--font-weight-semibold);
+
+    transition:all var(--transition);
+
+}
+
+
+/* ==========================================================
+   PRIMARY BUTTON
+========================================================== */
+
+.button--primary{
+
+    color:#fff;
+
+    background:var(--gradient-primary);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.button--primary:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+
+/* ==========================================================
+   SECONDARY BUTTON
+========================================================== */
+
+.button--secondary{
+
+    background:var(--color-surface-secondary);
+
+    color:var(--color-text);
+
+    border:1px solid var(--color-border);
+
+}
+
+.button--secondary:hover{
+
+    background:var(--color-surface-hover);
+
+}
+
+
+/* ==========================================================
+   GHOST BUTTON
+========================================================== */
+
+.button--ghost{
+
+    background:transparent;
+
+}
+
+.button--ghost:hover{
+
+    background:rgba(91,127,255,.08);
+
+}
+
+
+/* ==========================================================
+   ICON BUTTON
+========================================================== */
+
+.button--icon{
+
+    width:46px;
+
+    height:46px;
+
+    padding:0;
+
+    border-radius:50%;
+
+}
+
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(91,127,255,.10);
+
+    color:var(--color-primary);
+
+    font-size:var(--font-size-sm);
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.card{
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-xl);
+
+    box-shadow:var(--shadow-md);
+
+    overflow:hidden;
+
+}
+
+.card__header{
+
+    padding:var(--space-6);
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+.card__body{
+
+    padding:var(--space-6);
+
+}
+
+.card__footer{
+
+    padding:var(--space-5);
+
+    border-top:1px solid var(--color-border);
+
+}
+
+
+/* ==========================================================
+   CODE BLOCK
+========================================================== */
+
+.code-block{
+
+    background:#0F172A;
+
+    color:#F8FAFC;
+
+    border-radius:var(--radius-lg);
+
+    padding:var(--space-6);
+
+    font-family:var(--font-code);
+
+    overflow:auto;
+
+}
+
+
+/* ==========================================================
+   TOAST
+========================================================== */
+
+.toast{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px 24px;
+
+    border-radius:var(--radius-lg);
+
+    background:#111827;
+
+    color:white;
+
+    box-shadow:var(--shadow-xl);
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+.modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.55);
+
+}
+
+.modal{
+
+    width:min(600px,92%);
+
+    padding:var(--space-8);
+
+    border-radius:var(--radius-xl);
+
+    background:var(--color-surface);
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+
+/* ==========================================================
+   LOADER
+========================================================== */
+
+.loader{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    border:5px solid rgba(0,0,0,.08);
+
+    border-top-color:var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   DARK MODE
+========================================================== */
+
+body.dark .panel,
+body.dark .card,
+body.dark .modal{
+
+    background:var(--dark-surface);
+
+    border-color:var(--dark-border);
+
+}
+
+body.dark .button--secondary{
+
+    background:var(--dark-surface-secondary);
+
+    color:var(--dark-text);
+
+    border-color:var(--dark-border);
+
+}
+
+body.dark .button--secondary:hover{
+
+    background:#334155;
+
+}
+
+body.dark .badge{
+
+    background:rgba(91,127,255,.20);
+
+}
+
+body.dark .code-block{
+
+    background:#020617;
+
+}
+
+/* ==========================================================
+   COPY BUTTON STATES
+========================================================== */
+
+.is-success{
+
+    background:var(--color-success)!important;
+
+    color:#FFFFFF!important;
+
+}
+
+.is-error{
+
+    background:var(--color-danger)!important;
+
+    color:#FFFFFF!important;
+
+}

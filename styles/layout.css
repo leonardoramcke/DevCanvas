@@ -1,0 +1,336 @@
+/* ==========================================================
+   DevCanvas
+   Layout.css
+   Estrutura Principal da Aplicação
+========================================================== */
+
+
+/* ==========================================================
+   APP
+========================================================== */
+
+.app{
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:100vh;
+
+}
+
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.container{
+
+    width:min(100% - 48px,var(--container));
+
+    margin-inline:auto;
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:var(--z-sticky);
+
+    height:var(--header-height);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding-inline:var(--space-8);
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+
+/* ==========================================================
+   HEADER LEFT
+========================================================== */
+
+.header__left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-5);
+
+}
+
+
+/* ==========================================================
+   HEADER RIGHT
+========================================================== */
+
+.header__right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-4);
+
+}
+
+
+/* ==========================================================
+   MAIN
+========================================================== */
+
+.main{
+
+    flex:1;
+
+    display:flex;
+
+}
+
+
+/* ==========================================================
+   MAIN GRID
+========================================================== */
+
+.main-grid{
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:
+
+        var(--sidebar-width)
+
+        minmax(0,1fr)
+
+        var(--code-width);
+
+}
+
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+.sidebar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-6);
+
+    padding:var(--space-7);
+
+    background:var(--color-surface);
+
+    border-right:1px solid var(--color-border);
+
+    overflow-y:auto;
+
+}
+
+
+/* ==========================================================
+   PREVIEW
+========================================================== */
+
+.preview-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:var(--space-8);
+
+    overflow:hidden;
+
+}
+
+
+/* ==========================================================
+   PREVIEW HEADER
+========================================================== */
+
+.preview-header{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:var(--space-3);
+
+    margin-bottom:var(--space-8);
+
+    text-align:center;
+
+}
+
+
+/* ==========================================================
+   PREVIEW BODY
+========================================================== */
+
+.preview-body{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+/* ==========================================================
+   CODE PANEL
+========================================================== */
+
+.code-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:var(--space-7);
+
+    background:var(--color-surface);
+
+    border-left:1px solid var(--color-border);
+
+}
+
+
+/* ==========================================================
+   CODE HEADER
+========================================================== */
+
+.code-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:var(--space-6);
+
+}
+
+
+/* ==========================================================
+   CODE BODY
+========================================================== */
+
+.code-body{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:var(--space-8);
+
+    padding:var(--space-8);
+
+    border-top:1px solid var(--color-border);
+
+    background:var(--color-surface);
+
+}
+
+
+/* ==========================================================
+   FOOTER COLUMNS
+========================================================== */
+
+.footer__column{
+
+    flex:1;
+
+}
+
+.footer__column:last-child{
+
+    text-align:right;
+
+}
+
+
+/* ==========================================================
+   DARK MODE
+========================================================== */
+
+body.dark .header{
+
+    background:rgba(15,23,42,.80);
+
+    border-color:var(--dark-border);
+
+}
+
+body.dark .sidebar{
+
+    background:var(--dark-surface);
+
+    border-color:var(--dark-border);
+
+}
+
+body.dark .code-section{
+
+    background:var(--dark-surface);
+
+    border-color:var(--dark-border);
+
+}
+
+body.dark .footer{
+
+    background:var(--dark-surface);
+
+    border-color:var(--dark-border);
+
+}
