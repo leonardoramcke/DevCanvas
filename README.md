@@ -1,5 +1,8 @@
 # 🎨 DevCanvas - Modern CSS Generator
 
+[![CI](https://github.com/leonardoramcke/DevCanvas/actions/workflows/ci.yml/badge.svg)](https://github.com/leonardoramcke/DevCanvas/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/leonardoramcke/DevCanvas/blob/main/LICENSE)
+
 > Gerador moderno de CSS com preview em tempo real. Crie efeitos visuais incríveis como Glassmorphism, sombras compostas, gradientes e border radius de forma simples e intuitiva.
 
 ---
@@ -32,3 +35,23 @@ Como o projeto foi desenvolvido em **HTML, CSS e JavaScript puros**, você não 
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/leonardoramcke/DevCanvas.git
+   ```
+
+2. **Abra o projeto:**
+   Navegue até a pasta clonada e abra o arquivo `index.html` diretamente no navegador, ou utilize uma extensão como o [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) no VS Code para recarregamento automático.
+
+---
+
+## 🧪 Qualidade de Código
+
+Este projeto usa **ESLint** e **Prettier** para manter o código consistente, e **GitHub Actions** para rodar essas checagens automaticamente em cada push/pull request.
+
+> Essa parte é opcional — só é necessária se você for **contribuir com o código**. Para apenas visualizar o site, o passo a passo acima é suficiente (nenhuma dependência de Node.js é exigida para rodar a aplicação).
+
+Para rodar localmente:
+
+```bash
+npm install       # instala as ferramentas de desenvolvimento
+npm run lint      # verifica problemas de código
+npm run format    # formata os arquivos automaticamente
+```

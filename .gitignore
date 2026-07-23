@@ -9,3 +9,6 @@ Desktop.ini
 
 # Logs e arquivos temporários
 *.log
+
+# Node.js
+node_modules/

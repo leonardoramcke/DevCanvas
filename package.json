@@ -1,0 +1,24 @@
+{
+  "name": "devcanvas",
+  "version": "1.1.0",
+  "description": "Gerador moderno de CSS com preview em tempo real. Crie efeitos de Glassmorphism, sombras e gradientes com facilidade.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint scripts/",
+    "lint:fix": "eslint scripts/ --fix",
+    "format": "prettier --write \"**/*.{js,css,html,md,json}\"",
+    "format:check": "prettier --check \"**/*.{js,css,html,md,json}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leonardoramcke/DevCanvas.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "prettier": "^3.3.3"
+  }
+}
